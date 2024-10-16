@@ -10,7 +10,7 @@ namespace API.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            migrationBuilder.CreateTable(           //uses information from DataContext
                 name: "Users",
                 columns: table => new
                 {

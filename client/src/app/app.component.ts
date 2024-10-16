@@ -8,13 +8,13 @@ import { HomeComponent } from "./home/home.component";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavComponent, HomeComponent],
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html',     //this is the html template that this component is using
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit{       //this consturctor happens when the class is instantiated
   private accountService = inject(AccountService);
 
-  ngOnInit(): void {
+  ngOnInit(): void {       //This is called after angular has initialized all data-bound properties
     this.setCurrentUser();
   }
 
