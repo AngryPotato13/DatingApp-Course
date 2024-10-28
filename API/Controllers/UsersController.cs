@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-public class UsersController(DataContext context) : BaseApiController  
+public class UsersController(DataContext context) : BaseApiController   //this class now dervies from BaseApiController
 {                                                                       
-    [AllowAnonymous]
+    [AllowAnonymous]  //alows anonymous users to access this end point
     [HttpGet]     //api/users    It gets this from the class name
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()   //Gets the list of users from AppUser
     {

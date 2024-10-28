@@ -8,7 +8,7 @@ public class AppUser     //this is the table and the properties below are all co
 
     public required string UserName { get; set; }  //required means it is required for it to be entered into the table
 
-    public required byte[] PasswordHash { get; set; }
+    public required byte[] PasswordHash { get; set; }  //this stores the password hash
 
-    public required byte[] PasswordSalt { get; set; }
+    public required byte[] PasswordSalt { get; set; }  //this stores the password salt
 }

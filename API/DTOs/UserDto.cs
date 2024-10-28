@@ -2,7 +2,7 @@ using System;
 
 namespace API.DTOs;
 
-public class UserDto
+public class UserDto   //This is the information that we want to return to the user
 {
     public required string Username { get; set; }
 

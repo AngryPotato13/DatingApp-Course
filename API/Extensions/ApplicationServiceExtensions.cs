@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Extensions;
 
-public static class ApplicationServiceExtensions
+public static class ApplicationServiceExtensions  //They are static so we can use whats in this class without creating a new instance of this class
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
     {

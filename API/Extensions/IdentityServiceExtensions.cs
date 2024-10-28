@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace API.Extensions;
 
-public static class IdentityServiceExtensions
+public static class IdentityServiceExtensions  //They are static so we can use whats in this class without creating a new instance of this class
 {
     public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
     {
