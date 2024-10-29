@@ -17,9 +17,9 @@ export class NavComponent {
   model: any ={};
 
   login(){
-    this.accountService.login(this.model).subscribe({
-      next: response => {console.log(response);},
-      error: error => console.log(error)
+    this.accountService.login(this.model).subscribe({   //calls the login method from account.service.ts
+      next: response => {console.log(response);},   //what to do next
+      error: error => console.log(error)   //what to do if theres an error
       
     })
   }

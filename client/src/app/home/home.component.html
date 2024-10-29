@@ -11,9 +11,9 @@
         }@else {
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-4">                                                                                                  <!--data input is in [] while output is in ()-->
-                        <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>     <!--when registerToggle() is false it shows the register.component.html file-->
-                    </div>
+                    <div class="col-4">                                                              <!--data input is in [] while output is in ()-->
+                        <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>  <!--when registerToggle() is false it shows the register.component.html file-->
+                    </div>                                                                           <!--Allows register to user cancelRegisterMode-->
                 </div>
             </div>
         }

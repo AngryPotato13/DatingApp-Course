@@ -14,12 +14,12 @@ export class HomeComponent implements OnInit{
   registerMode = false;
   users: any;
 
-  ngOnInit(): void {
+  ngOnInit(): void {    //Does this when the application is started
     this.getUsers();
   }
 
 
-  registerToggle(){
+  registerToggle(){    //This is a conditional to whether to display the register form or not
     this.registerMode = !this.registerMode;
   }
 
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit{
     this.registerMode = event;
   }
 
-  getUsers(){
+  getUsers(){       //This gets all the users from the database
     this.http.get('https://localhost:5001/api/users').subscribe({
       next: Response => this.users = Response,
       error : error => console.log(error),

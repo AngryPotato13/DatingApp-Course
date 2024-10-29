@@ -11,8 +11,8 @@ using API.Extensions;
 var builder = WebApplication.CreateBuilder(args); 
 
 // Add services to the container.
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddIdentityServices(builder.Configuration);     //Uses the IdentityServiceExtensions in the extensions folder
+builder.Services.AddApplicationServices(builder.Configuration);  //Uses the ApplicationServiceExtensions in the extensions folder and this is an extension method
+builder.Services.AddIdentityServices(builder.Configuration);     //Uses the IdentityServiceExtensions in the extensions folder and this is an extension method
 
 
 var app = builder.Build();

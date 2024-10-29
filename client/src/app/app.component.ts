@@ -18,10 +18,10 @@ export class AppComponent implements OnInit{       //this consturctor happens wh
     this.setCurrentUser();
   }
 
-  setCurrentUser(){
+  setCurrentUser(){     //This checks to see whether the user has been logged in before and if they have it keeps them signed in
     const userString = localStorage.getItem('user');
-    if(!userString) return;
-    const user = JSON.parse(userString);
+    if(!userString) return;   //if userString is empty it'll stop here
+    const user = JSON.parse(userString);   
     this.accountService.currentUser.set(user);
   }
 }

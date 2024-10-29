@@ -27,6 +27,6 @@ export class RegisterComponent{
 
 
   cancel(){
-    this.cancelRegister.emit(false);
+    this.cancelRegister.emit(false);    //emits cancelRegister to the parent (home)
   }
 }

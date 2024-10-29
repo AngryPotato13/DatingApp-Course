@@ -9,14 +9,14 @@ import { map } from 'rxjs';
 export class AccountService {
   private http = inject(HttpClient);
   baseUrl = 'https://localhost:5001/api/';
-  currentUser = signal<User | null>(null);
+  currentUser = signal<User | null>(null);   //User is imported from user.ts and (null) is it's initial value
 
-  login(model:any){             //uses login from nav.component.ts
-    return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(
-      map(user => {
+  login(model:any){             //uses login from nav.component.ts (Think this is wrong)
+    return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(   //this is a http post request
+      map(user => {      //this returns the user from the api
         if (user){
-          localStorage.setItem('user', JSON.stringify(user));
-          this.currentUser.set(user);
+          localStorage.setItem('user', JSON.stringify(user));   //stores user as a stringify in local storage and user is the key for it
+          this.currentUser.set(user);   //this sets the currentUser as user
         }
       })
     )
