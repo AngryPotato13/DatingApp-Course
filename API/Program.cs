@@ -27,5 +27,19 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+ 
+using var scope = app.Services.CreateScope();      //This section is used to seed data into the database
+var services = scope.ServiceProvider;
+try
+{
+    var context = services.GetRequiredService<DataContext>();
+    await context.Database.MigrateAsync();                //This adds any pending migrations to the database
+    await Seed.SeedUsers(context);       //Uses SeedUsers from Seed.cs
+}
+catch (Exception ex)
+{
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(ex, "An error occured during migration");
+}
 
 app.Run();

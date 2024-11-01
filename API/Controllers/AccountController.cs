@@ -19,23 +19,24 @@ public class AccountController(DataContext context, ITokenService tokenService) 
 
         if(await UserExists(registerDto.Username)) return BadRequest("Username is taken");  //does UserExists and returns if its already taken
 
-        using var hmac = new HMACSHA512();   //used to encrypt text
+        return Ok();
+        // using var hmac = new HMACSHA512();   //used to encrypt text
 
-        var user = new AppUser
-        {
-            UserName = registerDto.Username.ToLower(),
-            PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),   //this hashes the password
-            PasswordSalt = hmac.Key    //This is used to scramble the hashed password
-        };
+        // var user = new AppUser
+        // {
+        //     UserName = registerDto.Username.ToLower(),
+        //     PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),   //this hashes the password
+        //     PasswordSalt = hmac.Key    //This is used to scramble the hashed password
+        // };
 
-        context.Users.Add(user);
-        await context.SaveChangesAsync();  // saves the info (context) into the database (Users)
+        // context.Users.Add(user);
+        // await context.SaveChangesAsync();  // saves the info (context) into the database (Users)
 
-        return new UserDto   //returns the UserDto which contains the username and the token
-        {
-            Username = user.UserName,
-            Token = tokenService.CreateToken(user)
-        };
+        // return new UserDto   //returns the UserDto which contains the username and the token
+        // {
+        //     Username = user.UserName,
+        //     Token = tokenService.CreateToken(user)
+        // };
     }
 
     [HttpPost("login")]  //account(Name of the controller)/login
