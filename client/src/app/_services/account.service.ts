@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { User } from '../_models/user';
 import { map } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'    //is a singleton and is instantiated when the user uses the application and disposed of when the application is
 })
 export class AccountService {
   private http = inject(HttpClient);
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl = environment.apiUrl;    //Uses the url from environment.ts
   currentUser = signal<User | null>(null);   //User is imported from user.ts and (null) is it's initial value
 
   login(model:any){             //uses login from nav.component.ts (Think this is wrong)

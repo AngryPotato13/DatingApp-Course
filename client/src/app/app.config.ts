@@ -6,11 +6,12 @@ import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideToastr } from 'ngx-toastr';
 import { errorInterceptor } from './_interceptors/error.interceptor';
+import { jwtInterceptor } from './_interceptors/jwt.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient(withInterceptors([errorInterceptor])),      //allows the service to be available for injections and passes error.interceptor.ts 
+    provideHttpClient(withInterceptors([errorInterceptor, jwtInterceptor])),      //allows the service to be available for injections and passes error.interceptor.ts 
     provideAnimations(),
     provideToastr({positionClass: 'toast-bottom-right'})    //allows toastr to be used (pop ups)
   ]

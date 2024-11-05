@@ -23,6 +23,8 @@ public class AppUser     //this is the table and the properties below are all co
 
     public required string Gender { get; set; }
 
+    public string? Introduction { get; set; }
+
     public string? Interests { get; set; }
 
     public string? LookingFor { get; set; }
