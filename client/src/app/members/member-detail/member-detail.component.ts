@@ -20,12 +20,12 @@ export class MemberDetailComponent implements OnInit{
   images: GalleryItem[] = [];
 
   ngOnInit(): void {
-    this.loadMember();
+    this.loadMember();    //Does loadMember() when the angular is initiated
   }
 
   loadMember(){
     const username = this.route.snapshot.paramMap.get('username');
-    if (!username) return;
+    if (!username) return;     //if username is empty it returns null
     this.memberService.getMember(username).subscribe({
       next: member => {this.member = member; member.photos.map(p => {this.images.push(new ImageItem({src: p.url, thumb: p.url}))})}
     })

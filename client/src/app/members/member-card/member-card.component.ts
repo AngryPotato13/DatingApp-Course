@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './member-card.component.css'
 })
 export class MemberCardComponent {
-  member = input.required<Member>();    //Uses member.ts
+  member = input.required<Member>();    //Uses member.ts Member ans atores it as member
 }
