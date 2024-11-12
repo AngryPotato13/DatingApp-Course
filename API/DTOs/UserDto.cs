@@ -6,6 +6,8 @@ public class UserDto   //This is the information that we want to return to the u
 {
     public required string Username { get; set; }
 
+    public required string KnownAs { get; set; }
+
     public required string Token { get; set; }
 
     public string? PhotoUrl { get; set; }
