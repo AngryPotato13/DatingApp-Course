@@ -10,5 +10,7 @@ public class UserDto   //This is the information that we want to return to the u
 
     public required string Token { get; set; }
 
+    public required string Gender { get; set; }
+
     public string? PhotoUrl { get; set; }
 }

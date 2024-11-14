@@ -2,6 +2,7 @@ using System.Security.Claims;
 using API.DTOs;
 using API.Entities;
 using API.Extensions;
+using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -13,9 +14,12 @@ namespace API.Controllers;
 public class UsersController(IUserRepository userRepository, IMapper mapper, IPhotoService photoService) : BaseApiController   //this class now dervies from BaseApiController
 {                                                                       
     [HttpGet]     //api/users    It gets this from the class name
-    public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()   //Gets the list of users from AppUser
+    public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)   //Gets the list of users from AppUser
     {
-        var users = await userRepository.GetMembersAsync();  //Calls GetUsersAsync() in UserRepository
+        userParams.CurrentUsername = User.GetUserName();
+        var users = await userRepository.GetMembersAsync(userParams);  //Calls GetUsersAsync() in UserRepository
+
+        Response.AddPaginationHeader(users);
 
         return Ok(users);
     }
