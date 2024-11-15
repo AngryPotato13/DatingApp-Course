@@ -23,6 +23,6 @@ export class AppComponent implements OnInit{       //this consturctor happens wh
     const userString = localStorage.getItem('user');
     if(!userString) return;   //if userString is empty it'll stop here
     const user = JSON.parse(userString);   
-    this.accountService.currentUser.set(user);
+    this.accountService.setCurrentUser(user);
   }
 }

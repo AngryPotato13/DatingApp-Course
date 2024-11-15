@@ -3,12 +3,14 @@ import { inject, Injectable, signal } from '@angular/core';
 import { User } from '../_models/user';
 import { map } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { LikesService } from './likes.service';
 
 @Injectable({
   providedIn: 'root'    //is a singleton and is instantiated when the user uses the application and disposed of when the application is
 })
 export class AccountService {
   private http = inject(HttpClient);
+  private likeService = inject(LikesService);
   baseUrl = environment.apiUrl;    //Uses the url from environment.ts
   currentUser = signal<User | null>(null);   //User is imported from user.ts and (null) is it's initial value
 
@@ -36,6 +38,7 @@ export class AccountService {
   setCurrentUser(user: User){
     localStorage.setItem('user', JSON.stringify(user));   //stores user as a stringify in local storage and user is the key for it
     this.currentUser.set(user);   //this sets the currentUser as user
+    this.likeService.getLikeIds();
   }
 
 

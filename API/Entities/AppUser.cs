@@ -34,8 +34,7 @@ public class AppUser     //this is the table and the properties below are all co
     public required string Country { get; set; }
     public List<Photo> Photos { get; set; } = [];      //Uses Photo.cs
 
-    // public int GetAge()
-    // {
-    //     return DateOfBirth.CalculateAge();   //uses Calculate age from DateTimeExtension.cs
-    // }
+    public List<UserLike> LikedByUsers { get; set; } = [];
+
+    public List<UserLike> LikedUsers { get; set; } = [];
 }
