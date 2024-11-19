@@ -37,4 +37,8 @@ public class AppUser     //this is the table and the properties below are all co
     public List<UserLike> LikedByUsers { get; set; } = [];
 
     public List<UserLike> LikedUsers { get; set; } = [];
+
+    public List<Message> MessagesSent { get; set; } = [];
+
+    public List<Message> MessageRecieved { get; set; } = [];
 }
