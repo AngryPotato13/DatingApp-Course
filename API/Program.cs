@@ -8,6 +8,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using API.Extensions;
 using API.Middleware;
+using Microsoft.AspNetCore.Identity;
+using API.Entities;
 
 var builder = WebApplication.CreateBuilder(args); 
 
@@ -33,8 +35,10 @@ var services = scope.ServiceProvider;
 try
 {
     var context = services.GetRequiredService<DataContext>();
+    var userManager = services.GetRequiredService<UserManager<AppUser>>();
+    var roleManager = services.GetRequiredService<RoleManager<AppRole>>();
     await context.Database.MigrateAsync();                //This adds any pending migrations to the database
-    await Seed.SeedUsers(context);       //Uses SeedUsers from Seed.cs
+    await Seed.SeedUsers(userManager, roleManager);       //Uses SeedUsers from Seed.cs
 }
 catch (Exception ex)
 {

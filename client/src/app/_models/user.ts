@@ -4,5 +4,6 @@ export interface User{   //this is used to discribe the shape os User
     gender: string;
     token: string;
     photoUrl?: string;
+    roles: string[];
 }
 
