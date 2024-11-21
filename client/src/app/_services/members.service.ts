@@ -22,6 +22,7 @@ export class MembersService {
   memberCache = new Map();
   user = this.accountService.currentUser();
   userParams = signal<UserParams>(new UserParams(this.user));
+  hubConnection: any;
 
   resetUserParams(){
     this.userParams.set(new UserParams(this.user));
