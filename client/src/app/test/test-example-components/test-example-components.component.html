@@ -1,0 +1,535 @@
+<accordion [isAnimated]="true">   <!--Need to implement AccordionModule-->
+
+
+    <accordion-group heading="Buttons">
+        <ul>
+            <li class="mb-3">
+                Types of buttons
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+            </li>
+
+            <li class="mb-3">
+                Button tags
+                <a class="btn btn-primary" href="#" role="button">Link</a>
+                <button class="btn btn-primary" type="submit">Button</button>
+                <input class="btn btn-primary" type="button" value="Input">
+                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary" type="reset" value="Reset">
+            </li>
+
+            <li class="mb-3">
+                Outline buttons
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+            </li>
+
+            <li class="mb-3">
+                Block level button 
+                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+            </li>
+
+            <li class="mb-3">
+                Block level button 
+                <button type="button" class="btn btn-primary btn-lg">Big button</button>
+                <button type="button" class="btn btn-primary">Normal button</button>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+            </li>
+
+            <li class="mb-3">
+                Active and disabled buttons
+                <button type="button" class="btn btn-primary active">Active</button>
+                <button type="button" class="btn btn-primary" disabled>disabled</button>
+            </li>
+
+            <li class="mb-3">
+                Radio buttons
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off" > Radio
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off" > Radio
+                    </label>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                Button group
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Left</button>
+                    <button type="button" class="btn btn-secondary">Middle</button>
+                    <button type="button" class="btn btn-secondary">Right</button>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                Vertical button group
+                <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Left</button>
+                    <button type="button" class="btn btn-secondary">Middle</button>
+                    <button type="button" class="btn btn-secondary">Right</button>
+                </div>
+            </li>
+
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Cards">
+      <ul>
+        <li class="mb-3">
+            Cards
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/horse.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is text that can be shown here</p>
+                </div>
+                <div class="card-header">
+                    This ia a card header
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item text-center">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="/testing/Example" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary">This is a button</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="mb-3">
+            Card with set sizes
+            <div class="card w-25">
+                <div class="card-body">
+                    <h5 class="card-title card-header">Card title</h5>
+                    <p class="card-text">This text box has a set width which means if the text is to long it will go onto the next row.</p>
+                </div>
+            </div>
+        </li>
+
+        <li class="mb-3">
+            Card with navigation
+            <!-- <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active">Active</a>
+                        </li>
+                        <li class="nav-items">
+                            <a class="nav-link">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">This is the cards title</h5>
+                    <p class="card-text">This is a paragraph written below the title.</p>
+                    <a class="btn btn-info">Button</a>
+                </div>
+            </div> -->
+        </li>
+
+        <li class="mb-3">
+            Card group with border
+            <div class="card-group">
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+            </div>
+        </li>
+
+        <li class="mb-3">
+            Card columns (using CSS) with border 
+            <div class="card-columns">
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card text-center border-primary" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">This is some text to show an example of what can go here</p>
+                    </div>
+                    <div class="card-footer">Footer</div>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Utilities">
+        <ul>
+            <li class="mb-3">
+                Borders
+                <img src="./assets/rabbitFish.png" alt="first slide" style="height: 150px; width: 150px;" class="border border-warning mb-3">
+                <img src="./assets/rabbitFish.png" alt="first slide" style="height: 150px; width: 150px;" class="border-top border-warning mb-3">
+                <img src="./assets/rabbitFish.png" alt="first slide" style="height: 150px; width: 150px;" class="rounded-circle border border-warning mb-3">
+            </li>
+            <li class="mb-3">
+                Close icon
+                <button type="button" class="close">&times;</button>
+            </li>
+            <li class="mb-3">
+                Colours
+                <p class="bg-primary">Hello</p>
+                <p class="text-primary">Hello</p>
+            </li>
+            <li class="mb-3">
+                Embeded videos
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                </div>
+            </li>
+
+
+
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Flex">
+        <ul>
+            <li class="mb-3">
+                flexbox 
+                <div class="d-flex p-2 border mb-3">This is a flexbox container</div>
+            </li>
+
+            <li class="mb-3">
+                inline flexbox
+                <div class="d-inline-flex p-2 border mb-3">This is an inline flexbox container</div>
+            </li>
+
+            <li class="mb-3">
+                flex row
+                <div class="d-flex flex-row border mb-3">
+                    <div class="p-2 border">Flex row item 1</div>
+                    <div class="p-2 border">Flex row item 2</div>
+                    <div class="p-2 border">Flex row item 3</div>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                flex row reverse
+                <div class="d-flex flex-row-reverse border mb-3">
+                    <div class="p-2 border">Flex row reverse item 1</div>
+                    <div class="p-2 border">Flex row reverse item 2</div>
+                    <div class="p-2 border">Flex row reverse item 3</div>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                flex column
+                <div class="d-inline-flex flex-column border mb-3">
+                    <div class="p-2 border">Flex column item 1</div>
+                    <div class="p-2 border">Flex column item 2</div>
+                    <div class="p-2 border">Flex column item 3</div>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                flex row justify content
+                <div class="d-flex flex-row border mb-3 justify-content-center">
+                    <div class="p-2 border">justify</div>
+                    <div class="p-2 border">content</div>
+                    <div class="p-2 border">center</div>
+                </div>
+                <div class="d-flex flex-row border mb-3 justify-content-around">
+                    <div class="p-2 border">justify</div>
+                    <div class="p-2 border">content</div>
+                    <div class="p-2 border">around</div>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                flex stretch with item alignment
+                <div class="d-flex align-items-stretch border mb-3" style="height: 100px;">
+                    <div class="p-2 border">Flex column item 1</div>
+                    <div class="p-2 align-self-center border">Flex column item 2</div>
+                    <div class="p-2 border">Flex column item 3</div>
+                </div>
+            </li>
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Size">
+        <ul>
+            <li class="mb-3">
+                width
+                <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+                <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+                <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+                <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
+            </li>
+            <li class="mb-3">
+                height
+                <div style="height: 100px;" class="border">
+                    <div class="h-25 d-inline-block" style="background-color: bisque;">Height 25%</div>
+                    <div class="h-50 d-inline-block" style="background-color: bisque;">Height 50%</div>
+                    <div class="h-75 d-inline-block" style="background-color: bisque;">Height 75%</div>
+                    <div class="h-100 d-inline-block" style="background-color: bisque;">Height 100%</div>
+                </div>
+            </li>
+
+
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Dropdowns">   <!--Need to implement BsDropdownModule-->
+        <ul>
+            <li class="mb-3">
+                Dropdown with nested dropdown
+                <!-- <div class="btn-group" dropdown>
+                    <a dropdownToggle type="button" class="btn btn-primary " style="background-color: white; border-color: white;">                       
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                    <ul *dropdownMenu class="dropdown-menu">
+                        <li><a class="dropdown-item">Action</a></li>
+                        <li><a class="dropdown-item">Another action</a></li>
+                        <li><a class="dropdown-item">Another action</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li><a class="dropdown-item">Action seperated by divider</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li dropdown triggers="mouseover" placement="right" container="body">
+                            <a dropdownToggle class="dropdown-item dropdown-toggle">Hover for nested dropdown</a>
+                            <ul *dropdownMenu class="dropdown-menu">
+                                <li><a class="dropdown-item">Action</a></li>
+                                <li><a class="dropdown-item">Another action</a></li>
+                                <li><a class="dropdown-item">Another action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <div class="btn-group" dropdown>
+                    <a dropdownToggle type="button" class="btn btn-primary " style="background-color: white; border-color: white;">                       
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                    <ul *dropdownMenu class="dropdown-menu">
+                        <li><a class="dropdown-item">Action</a></li>
+                        <li><a class="dropdown-item">Another action</a></li>
+                        <li><a class="dropdown-item">Another action</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li><a class="dropdown-item">Action seperated by divider</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li dropdown triggers="mouseover" placement="right" container="body">
+                            <a dropdownToggle class="dropdown-item dropdown-toggle">Hover for nested dropdown</a>
+                            <ul *dropdownMenu class="dropdown-menu">
+                                <li><a class="dropdown-item">Action</a></li>
+                                <li><a class="dropdown-item">Another action</a></li>
+                                <li><a class="dropdown-item">Another action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </li>
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Carousel">      <!--Need to implement CarouselModule-->
+        <ul>
+          <li class="mb-3">
+              Carousel with controls and text
+              <carousel>
+                  <slide style="height: 500px;">
+                    <img src="./assets/horse.png" alt="first slide" style="display: block; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>First slide label</h3>
+                      <p>This is the first slide.</p>
+                    </div>
+                  </slide>
+                  <slide style="height: 500px;">
+                    <img src="./assets/pug.jpg" alt="second slide" style="display: block; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Second slide label</h3>
+                      <p>This is the second slide.</p>
+                    </div>
+                  </slide>
+                  <slide style="height: 500px;">
+                    <img src="./assets/rabbitFish.png" alt="third slide" style="display: block; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Third slide label</h3>
+                      <p>This is the third slide.</p>
+                    </div>
+                  </slide>
+                </carousel>
+          </li>
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Tabset">  <!--Need to implement TabsModule-->
+        <ul>
+            <li class="mb-3">
+                Tabset
+                <div>
+                    <tabset>
+                        <tab heading="Basic title">Basic content</tab>
+                        <tab heading="Basic title 2">Basic content 2</tab>
+                    </tabset>
+                </div>
+            </li>
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Modals">  <!--Need to implement ModalModule and add stuff to the ts file-->
+        <ul>
+            <li class="mb-3">
+                Modals
+                <button type="button" class="btn btn-primary" (click)="openModal(ModalExample)">Open modal</button>
+                <ng-template #ModalExample >
+                    <div class="modal-header">
+                        <h4 class="modal-title pull-left">Modal</h4>
+                        <button type="button" class="close btn-close pull-right" (click)="modalRef?.hide()"></button>
+                    </div>
+                    <div class="modal-body">
+                        This is the body of a modal.
+                    </div>
+                </ng-template>
+
+
+
+            </li>
+
+
+
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Tooltip"> <!--Need to implement TooltipModule-->
+        <ul>
+            <li class="mb-3">
+                Tooltip
+                <button type="button" class="btn btn-primary" tooltip="Hello this is a Tooltip">Hover over me</button>
+            </li>
+
+
+
+        </ul>
+    </accordion-group>
+
+
+
+    <accordion-group heading="Typeahead">
+        <ul>
+            <li class="mb-3">
+                Typeahead
+                <!-- <input [typeahead]="names" class="form-control"> -->
+            </li>
+        </ul>
+    </accordion-group>
+
+  </accordion>
+
+
+

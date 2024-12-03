@@ -4,11 +4,13 @@ import { NavComponent } from "./nav/nav.component";
 import { AccountService } from './_services/account.service';
 import { HomeComponent } from "./home/home.component";
 import { NgxSpinnerComponent } from 'ngx-spinner';
+import { TestNavComponent } from "./test/test-nav/test-nav.component";
+import { TestFooterComponent } from "./test/test-footer/test-footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, HomeComponent, NgxSpinnerComponent],
+  imports: [RouterOutlet, NavComponent, HomeComponent, NgxSpinnerComponent, TestFooterComponent],
   templateUrl: './app.component.html',     //this is the html template that this component is using
   styleUrl: './app.component.css'
 })

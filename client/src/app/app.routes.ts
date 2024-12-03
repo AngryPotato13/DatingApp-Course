@@ -13,9 +13,14 @@ import { preventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.gu
 import { memberDetailedResolver } from './_resolvers/member-detailed.resolver';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 import { adminGuard } from './_guards/admin.guard';
+import { TestHomeComponent } from './test/test-home/test-home.component';
+import { TestEmployeeComponent } from './test/test-employee/test-employee.component';
+import { TestExampleComponent } from './test/test-example/test-example.component';
+import { TestExampleComponentsComponent } from './test/test-example-components/test-example-components.component';
 
 export const routes: Routes = [            //These are all different routes
-    {path: '', component: HomeComponent},
+//    {path: '', component: HomeComponent},
+    {path: '', component: TestHomeComponent},
     {
         path: '',
         runGuardsAndResolvers: 'always',
@@ -26,7 +31,11 @@ export const routes: Routes = [            //These are all different routes
             {path: 'member/edit', component: MemberEditComponent, canDeactivate: [preventUnsavedChangesGuard]},
             {path: 'lists', component: ListsComponent},
             {path: 'messages', component: MessagesComponent},
-            {path: 'admin', component: AdminPanelComponent, canActivate: [adminGuard]}
+            {path: 'admin', component: AdminPanelComponent, canActivate: [adminGuard]},
+            {path: 'testing', component:TestHomeComponent},
+            {path: 'testing/E', component:TestEmployeeComponent},
+            {path: 'testing/Example', component:TestExampleComponent},
+            {path: 'testing/Example2', component:TestExampleComponentsComponent}
         ]
     },
     {path: 'errors', component: TestErrorsComponent},

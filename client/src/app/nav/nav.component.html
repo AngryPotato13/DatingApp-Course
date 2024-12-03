@@ -1,22 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
-      <a class="navbar-brand" routerLink="/">Dating App</a>
+
+      <a class="navbar-brand " routerLink="/">Welcome back</a>
 
       
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           @if (accountService.currentUser()){  <!-- only shows when the user is logged in -->
             <li class="nav-item">
-              <a routerLink="/members" routerLinkActive="active" class="nav-link">Matches</a>  <!-- router link changes the pages path and allows the app.routs.ts to work -->
+              <a routerLink="/testing/E" routerLinkActive="active" class="nav-link">About us</a>  <!-- router link changes the pages path and allows the app.routs.ts to work -->
             </li>
             <li class="nav-item">
-              <a routerLink="/lists" routerLinkActive="active" class="nav-link">Lists</a>  <!-- routerLinkActive means if the path is being used it turns the button bold -->
+              <a routerLink="/testing/Example" routerLinkActive="active" class="nav-link">Examples</a>  <!-- routerLinkActive means if the path is being used it turns the button bold -->
             </li>
             <li class="nav-item">
-              <a routerLink="/messages" routerLinkActive="active" class="nav-link">Messages</a>
+              <a routerLink="/testing/Example2" routerLinkActive="active" class="nav-link">Examples 2</a>
             </li>
             <li *appHasRole="['Admin', 'Moderator']" class="nav-item">
               <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a>
             </li>
+            <!-- <li class="nav-item">
+              <a routerLink="/testing" routerLinkActive="active" class="nav-link">Testing</a>
+            </li> -->
           } 
           <li class="nav-item">
             <a routerLink="/errors" routerLinkActive="active" class="nav-link">Errors</a>
@@ -45,3 +49,5 @@
                            the username to local storage if its correct so if the page is refreshed it remembers it -->
       </div>
   </nav>
+
+  
