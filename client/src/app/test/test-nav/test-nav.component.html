@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
       <a class="navbar-brand" routerLink="/">Dating App</a>
 
       
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a routerLink="/testing-employees" routerLinkActive="active" class="nav-link">Matches</a>  <!-- router link changes the pages path and allows the app.routs.ts to work -->
-            </li>
+              <a routerLink="/testing-employees" routerLinkActive="active" class="nav-link">Matches</a>  router link changes the pages path and allows the app.routs.ts to work -->
+            <!-- </li>
             <li class="nav-item">
-              <a routerLink="/testing" routerLinkActive="active" class="nav-link">Lists</a>  <!-- routerLinkActive means if the path is being used it turns the button bold -->
-            </li>
+              <a routerLink="/testing" routerLinkActive="active" class="nav-link">Lists</a>  routerLinkActive means if the path is being used it turns the button bold -->
+            <!-- </li>
             <li class="nav-item">
               <a routerLink="/messages" routerLinkActive="active" class="nav-link">Messages</a>
             </li>
@@ -24,5 +24,64 @@
           </li>
         </ul>
     </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #137DCF; height: 55px;">
+  <div class="container">
+ 
+    <!-- <input type="checkbox" class="sidebarIcon" id="Open" style="z-index: +100; width: 30px; height: 30px; opacity: 0;">
+    <label for="Open" class="sidebarIcon"></label>
+
+    <img src="/assets/menu-burger.png" alt="icon" id="Open" class="hideBurgerIMG sidebarIcon" style="width: 30px;">
+    <img src="/assets/cross.png" alt="icon" id="Open" class="hideCrossIMG sidebarIcon" style="width: 30px;">
+
+    <div id="sidebarMenu">
+      <ul class="menu">
+        <li><a routerLink="" (click)="MyCampaign()">My campaigns</a></li>
+        <li><a (click)="MyTasks()">My tasks</a></li>
+        <li><a (click)="MediaConfiguration()">Media configuration</a></li>
+        <li><a (click)="Reports()">Reports</a></li>
+        <li><a routerLink="testing/Example2" (click)="Stepbuilder()">Stepbuilder</a></li>
+        <li><a (click)="Templates()">Template</a></li>
+      </ul>
+    </div> -->
+
+
+    <button (click)="BurgerClick()" class="sidebarIcon BurgerButton">
+      <img src="/assets/menu-burger.png" alt="icon"  style="width: 30px;">
+    </button>
+    
+    <!--Have cross icon be apart of sidebarMenu that has a white background and goes infront of the burger menu icon-->
+
+    <div id="sidebarMenu">
+      <ul class="menu">
+        <li><a (click)="BurgerClick()" class="BurgerButton" routerLink="" (click)="MyCampaign()">My campaigns</a></li>
+        <li><a (click)="BurgerClick()" class="BurgerButton" (click)="MyTasks()">My tasks</a></li>
+        <li><a (click)="BurgerClick()" class="BurgerButton" (click)="MediaConfiguration()">Media configuration</a></li>
+        <li><a (click)="BurgerClick()" class="BurgerButton" (click)="Reports()">Reports</a></li>
+        <li><a (click)="BurgerClick()" class="BurgerButton" routerLink="testing/Example2" (click)="Stepbuilder()">Stepbuilder</a></li>
+        <li><a (click)="BurgerClick()" class="BurgerButton" (click)="Templates()">Template</a></li>
+        <a tooltip="Delete" type="button"><img src="/assets/Icons/trash.png" style="width: 25px; bottom: 0; left: 0;"></a>
+      </ul>
+    </div>
+    
+
+
+    <ul class="navbar-nav me-auto mb-2 mt-2 mb-md-0">
+      <li class="nav-item">
+        <a href="#" class="nav-item">
+          <img src="/assets/Logo.png" alt="Logo" class="nav-item" style="width: 100px;">
+        </a>
+      </li>
+    </ul>
+
+    <p style="position: fixed; top: 2%; left: 45%; color: white;">{{PageName}}</p>
+
+  </div>
 </nav>
+
+<div id="sidebarBackdrop">
+  <button (click)="BurgerClick()" class="BurgerButton" style="position: fixed; top: 0; width: 100vw; height: 100vh; z-index: 150; background-color: black; opacity: 20%;"></button>
+</div>
+
 

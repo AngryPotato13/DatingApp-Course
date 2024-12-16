@@ -1,0 +1,79 @@
+#sidebarMenu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 57px;
+    width: 250px;
+    background-color: rgb(239, 239, 239);
+    transform: translateX(-250px);
+    transition: transform 300ms ease-in-out;
+}
+
+#sidebarBackdrop{
+    display: none;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+
+.menu li{
+    color: chartreuse;
+    border-bottom: 1 px solid black;
+}
+
+.menu li a{
+    color: black;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebarIcon{
+    cursor: pointer;
+    position: fixed;
+    left: 1%;
+    top: 1%;
+    background: none;
+    border: none;
+    scale: 1;
+}
+
+
+/* #Open:checked ~ #sidebarMenu{
+    transform: translate(0px);
+}
+
+.hideBurgerIMG{
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+
+#Open:checked ~ .hideBurgerIMG{
+    transform: scale(0);
+}
+
+.hideCrossIMG{
+    transform: scale(0);
+    transition: transform 300ms ease-in-out;
+}
+
+#Open:checked ~ .hideCrossIMG{
+    transform: scale(1);
+} */
+
+
+
+
+
+
+
+

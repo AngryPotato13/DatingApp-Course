@@ -1,0 +1,163 @@
+<p style="text-align: center;">Search campaigns</p>
+
+<div class="row mb-4">
+    <div class="col " style="text-align: center; height: 35px;">
+      <input type="text" placeholder="Search" class="align-middle" style="height: 100%;  border-radius: 10px 0px 0px 10px;">
+      <button class="btn align-middle" type="submit" style="height: 100%; border-color: black; border-radius: 0px 10px 10px 0px; background-color: #137DCF;"><i class="fa fa-search align-middle" style="height: 100%;"></i></button>
+    </div>
+  </div>
+  
+  
+  
+  <accordion [isAnimated]="true" class="mb-5">
+    <accordion-group heading="Filter">
+      <div class="row">
+        <div class="col">
+          <p style="text-align: center;">status</p>
+          <ul>
+            <li class="dropdown-item"><input type="checkbox"><label>Completed</label></li>
+            <li class="dropdown-item"><input type="checkbox"><label>Modified</label></li>
+            <li class="dropdown-item"><input type="checkbox"><label>Delivered</label></li>
+            <li class="dropdown-item"><input type="checkbox"><label>Awaiting Approval</label></li>
+            <li class="dropdown-item"><input type="checkbox"><label>Approved</label></li>
+          </ul>
+          <!-- <div>
+            <input type="checkbox"><label>Completed</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>Modified</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>Delivered</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>Awaiting Approval</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>Approved</label>
+          </div> -->
+        </div>
+      
+        <div class="col">
+          <p style="text-align: center;">Output type</p>
+          <div>
+            <input type="checkbox"><label>HTML</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>PDF</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>JPG</label>
+          </div>
+          <div>
+            <input type="checkbox"><label>MP4</label>
+          </div>
+        </div>
+
+        <div class="col">
+            <p style="text-align: center;">Campaign name</p>
+            <label>Campaign Name</label>
+            <input type="text">
+          </div>
+      
+        <div class="col">
+          <p style="text-align: center;">Name</p>
+          <label>Job Name</label>
+          <input type="text">
+        </div>
+      
+        <div class="col">
+          <p style="text-align: center;">Template name</p>
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" style="background-color: #137DCF; color: white;" aria-controls="dropdown-basic">
+              Template names <span class="caret"></span>
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li><a class="dropdown-item">Template name 1</a></li>
+              <li><a class="dropdown-item">Template name 2</a></li>
+              <li><a class="dropdown-item">Template name 3</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="col">
+          <p style="text-align: center;">Date</p>
+          <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+            <input type="text" placeholder="Pick date" class="form-control" bsDaterangepicker style="width: fit-content;">
+          </div>
+        </div>
+      
+        <div class="col" style="text-align: center; top: 50%;">
+          <div>
+            <button class="btn" style="background-color: #137DCF; color: white;">Apply</button>
+          <!-- </div>
+          <div> -->
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </accordion-group>
+  </accordion>
+  
+  <p style="text-align: center;">2: items found</p>
+  
+  <div>
+    <table class="table table-striped table-hover">
+      <thead style="text-align: center; border: 5px;">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Thumbnail</th>
+          <th scope="col">Campaign name <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">Name <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">Template name <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">Last modified <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">Output type <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">status <img src="/assets/arrow.png" style="width: 20px;"></th>
+          <th scope="col">Approval assignee</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody style="text-align: center;">
+        <tr class="align-middle">
+          <td><input type="checkbox" id="CheckboxOpen"><label for="CheckboxOpen" class="Checkbox"></label></td>
+          <td><img src="/assets/horse.png" style="width: 70px; height: 70px;"></td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>        
+            <div class="btn-group" dropdown>
+              <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" style="background-color: #137DCF; color: white;" aria-controls="dropdown-basic">Actions <span class="caret"></span></button>
+              <ul *dropdownMenu class="dropdown-menu">
+                <li class="dropdown-item"><img src="/assets/Icons/preview.png" style="width: 17px; margin-right: 8px;"><label>Preview</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/jpg.png" style="width: 17px; margin-right: 8px;"><label>JPG</label></li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item"><img src="/assets/Icons/edit.png" style="width: 17px; margin-right: 8px;"><label>Edit</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/comment-alt.png" style="width: 17px; margin-right: 8px;"><label>Comments</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/rectangle-vertical-history.png" style="width: 17px; margin-right: 8px;"><label>Version histiry</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/download.png" style="width: 17px; margin-right: 8px;"><label>Download</label></li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item"><img src="/assets/Icons/duplicate.png" style="width: 17px; margin-right: 8px;"><label>Duplicate</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/move-to-folder.png" style="width: 17px; margin-right: 8px;"><label>Move</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/approve.png" style="width: 17px; margin-right: 8px;"><label>Approve</label></li>
+                <li class="dropdown-item"><img src="/assets/Icons/deliver.png" style="width: 17px; margin-right: 8px;"><label>Deliver</label></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>    
+  </div>
+  
+  
+  <div class="mb-2" style="position: fixed; bottom: 0; left: 40%;">
+    <p class="mb-0" style="text-align: center;">Page No. 1</p>
+    <button class="btn" style="background-color: #137DCF; color: white;">First</button>
+    <button class="btn" style="background-color: #137DCF; color: white;">Previous</button>
+    <button class="btn" style="background-color: #137DCF; color: white;">Next</button>
+    <button class="btn" style="background-color: #137DCF; color: white;">Last</button>
+  </div>

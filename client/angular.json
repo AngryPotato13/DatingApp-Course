@@ -33,7 +33,9 @@
               "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "C:/Users/Kieran/DatingAppCourse/DatingApp/client/src/app/test/test-nav/test-nav.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,12 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { MembersService } from '../../_services/members.service';
 import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-test-home', 
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, AccordionModule, BsDropdownModule, BsDatepickerModule, RouterLink],
   templateUrl: './test-home.component.html',
   styleUrl: './test-home.component.css',
   providers: [

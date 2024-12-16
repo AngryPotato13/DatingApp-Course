@@ -17,10 +17,12 @@ import { TestHomeComponent } from './test/test-home/test-home.component';
 import { TestEmployeeComponent } from './test/test-employee/test-employee.component';
 import { TestExampleComponent } from './test/test-example/test-example.component';
 import { TestExampleComponentsComponent } from './test/test-example-components/test-example-components.component';
+import { TestMyCampaignComponent } from './test/test-my-campaign/test-my-campaign.component';
+import { TestSearchComponent } from './test/test-search/test-search.component';
 
 export const routes: Routes = [            //These are all different routes
 //    {path: '', component: HomeComponent},
-    {path: '', component: TestHomeComponent},
+    {path: '', component: TestMyCampaignComponent},
     {
         path: '',
         runGuardsAndResolvers: 'always',
@@ -35,7 +37,12 @@ export const routes: Routes = [            //These are all different routes
             {path: 'testing', component:TestHomeComponent},
             {path: 'testing/E', component:TestEmployeeComponent},
             {path: 'testing/Example', component:TestExampleComponent},
-            {path: 'testing/Example2', component:TestExampleComponentsComponent}
+            {path: 'testing/Example2', component:TestExampleComponentsComponent},
+
+            {path: 'testing/ChosenCampaign', component:TestHomeComponent},
+            {path: 'testing/MyCampaign', component:TestMyCampaignComponent},
+            {path: 'testing/MyCampaign/Search', component:TestSearchComponent},
+
         ]
     },
     {path: 'errors', component: TestErrorsComponent},

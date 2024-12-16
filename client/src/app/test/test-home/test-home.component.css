@@ -1,0 +1,24 @@
+/* input[type="Complete"]{
+    vertical-align: middle;
+} */
+
+#Checkbox{
+    height: 220px;
+    width: 170px;
+    background-color: white;
+    
+    border-style: solid;
+    border-width: thin;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    transform: translate(0px);
+}
+
+#CheckboxOpen:checked ~ #Checkbox{
+
+    /* scale: 2; */
+    /* transition: tranform 300ms ease-in-out; */
+}

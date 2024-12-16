@@ -10,7 +10,7 @@ import { TestFooterComponent } from "./test/test-footer/test-footer.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, HomeComponent, NgxSpinnerComponent, TestFooterComponent],
+  imports: [RouterOutlet, NavComponent, HomeComponent, NgxSpinnerComponent, TestFooterComponent, TestNavComponent],
   templateUrl: './app.component.html',     //this is the html template that this component is using
   styleUrl: './app.component.css'
 })
